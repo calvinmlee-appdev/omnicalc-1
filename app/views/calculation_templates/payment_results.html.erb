@@ -4,16 +4,16 @@
 
 <dl>
   <dt> APR </dt>
-  <dd> <%= (@apr * 100).to_s + "%" %></dd>
+  <dd> <%= ((@apr * 100).round(4)).to_s + "%" %></dd>
 
   <dt> Number of Years </dt>
-  <dd> <%= @num_years.to_s%></dd>
+  <dd> <%= (@num_years.round(0).to_s)%></dd>
 
   <dt> Principal </dt>
-  <dd> <%= "$" + (@principal.to_s)%></dd>
+  <dd> <%= number_to_currency(@principal)%></dd>
 
   <dt> Payment </dt>
-  <dd> <%= @result%></dd>
+  <dd> <%= number_to_currency(@result)%></dd>
 </dl>
 
 <a href="/payment/new">Calculate another payment</a>
