@@ -1,0 +1,19 @@
+<h1>Payment Results</h1>
+
+
+
+<dl>
+  <dt> APR </dt>
+  <dd> <%= (@apr * 100).to_s + "%" %></dd>
+
+  <dt> Number of Years </dt>
+  <dd> <%= @num_years.to_s%></dd>
+
+  <dt> Principal </dt>
+  <dd> <%= "$" + (@principal.to_s)%></dd>
+
+  <dt> Payment </dt>
+  <dd> <%= @result%></dd>
+</dl>
+
+<a href="/payment/new">Calculate another payment</a>
